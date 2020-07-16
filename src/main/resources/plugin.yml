@@ -1,0 +1,31 @@
+name: CrafterLegends
+version: 0.0.1-Alpha
+main: dev.siro256.spigotpl.crafterlegends.CrafterLegends
+description: Minecraftゲーム CrafterLegendのシステムプラグイン
+prefix: CLegends
+author: Siro_256
+authors:
+  - Siro_256
+commands:
+  test:
+    description: プラグイン開発用のコマンド リリース時にはコマンドを無効化すること
+    aliases: cltest
+    permission: clegends.developer
+    permission-message: 開発者以外は使用できません！
+permissions:
+  clegends.developer:
+    description: 開発者用 本番環境ではclegends.adminと同等の挙動
+    default: false
+    children:
+      clegends.admin: true
+      clegends.player: true
+  clegends.admin:
+    description: 管理者/運営者用 playerと同時に所有不可 本番環境ではdeveloperではなくこちらの利用を推奨
+    default: op
+    children:
+    #無し
+  clegends.player:
+    description: 参加者用 adminと同時に所有不可
+    default: not op
+    children:
+    #無し
