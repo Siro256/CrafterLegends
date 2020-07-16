@@ -14,6 +14,7 @@ class CrafterLegends: JavaPlugin() {
     override fun onEnable() {
         //コマンド登録
         mapOf<String, CommandExecutor>(
+            "test" to TestCommand
         ).forEach { (command, executor) ->
             Bukkit.getPluginCommand(command).executor = executor
         }
