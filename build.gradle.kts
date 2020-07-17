@@ -25,4 +25,18 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+
+    withType<ProcessResources> {
+        from(projectDir) { include("LICENSE") }
+        from(sourceSets.main.get().resources.srcDirs) {
+            include("plugin.yml")
+                .expand(
+                    Pair("VERSION", project.version)
+                )
+        }
+    }
+
+    withType<Jar> {
+        from(configurations.getByName("compile").map { if (it.isDirectory) it else zipTree(it) })
+    }
 }

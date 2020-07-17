@@ -1,5 +1,5 @@
 name: CrafterLegends
-version: 0.0.1-Alpha
+version: ${VERSION}
 main: dev.siro256.spigotpl.crafterlegends.CrafterLegends
 description: Minecraftゲーム CrafterLegendのシステムプラグイン
 prefix: CLegends
