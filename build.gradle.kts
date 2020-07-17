@@ -1,4 +1,5 @@
 import java.net.URI
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.3.72"
@@ -18,11 +19,12 @@ dependencies {
     implementation("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
 }
 
-tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+tasks{
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
     }
-    compileTestKotlin {
+
+    withType<KotlinCompile> {
         kotlinOptions.jvmTarget = "1.8"
     }
 
