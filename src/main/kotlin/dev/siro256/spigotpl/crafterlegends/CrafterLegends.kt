@@ -9,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class CrafterLegends: JavaPlugin() {
 
-    val VERSION = "0.0.1-Alpha"
+    private val version = "0.0.1-Alpha"
 
     override fun onEnable() {
         //コマンド登録
@@ -28,7 +28,7 @@ class CrafterLegends: JavaPlugin() {
 
         logger.info("""
             ${ChatColor.GREEN}CrafterLegends起動:
-              ${ChatColor.WHITE}現在のプラグインのバージョンは ${ChatColor.YELLOW}$VERSION ${ChatColor.WHITE}です
+              ${ChatColor.WHITE}現在のプラグインのバージョンは ${ChatColor.YELLOW}$version ${ChatColor.WHITE}です
               ${ChatColor.WHITE}プラグインの最新バージョンは ${ChatColor.YELLOW}${getLatestVersion()} ${ChatColor.WHITE}です
         """.trimIndent())
     }
