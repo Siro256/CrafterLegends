@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
 }
 
 tasks{
@@ -29,6 +29,7 @@ tasks{
     }
 
     withType<ProcessResources> {
+        filteringCharset = "UTF-8"
         from(projectDir) { include("LICENSE") }
         from(sourceSets.main.get().resources.srcDirs) {
             include("plugin.yml")
@@ -39,6 +40,8 @@ tasks{
     }
 
     withType<Jar> {
-        from(configurations.getByName("compile").map { if (it.isDirectory) it else zipTree(it) })
+        from(configurations.getByName("implementation")
+            .apply{ isCanBeResolved = true }
+            .map{ if (it.isDirectory) it else zipTree(it) })
     }
 }
