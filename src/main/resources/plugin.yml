@@ -10,7 +10,7 @@ commands:
   test:
     description: プラグイン開発用のコマンド リリース時にはコマンドを無効化すること
     aliases: cltest
-    permission: clegends.developer
+    permission: clegends.admin
     permission-message: 開発者以外は使用できません！
 permissions:
   clegends.player:
@@ -23,9 +23,3 @@ permissions:
     default: op
     children:
     #無し
-  clegends.developer:
-    description: 開発者用 本番環境ではclegends.adminと同等の挙動
-    default: false
-    children:
-      clegends.admin: true
-      clegends.player: true
