@@ -4,7 +4,11 @@ import java.util.*
 import kotlin.collections.HashMap
 
 enum class Message {
-    ;
+    //Item name
+    ITEM_GEAR_BODY_SHIELD_LV1,
+    ITEM_GEAR_BODY_SHIELD_LV2,
+    ITEM_GEAR_BODY_SHIELD_LV3,
+    ITEM_GEAR_BODY_SHIELD_LV4;
 
     companion object {
         val mapping = HashMap<Locale, HashMap<Message, String>>()
