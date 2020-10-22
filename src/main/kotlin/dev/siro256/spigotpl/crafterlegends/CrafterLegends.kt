@@ -31,15 +31,15 @@ class CrafterLegends: JavaPlugin() {
         }
 
         logger.info("""
-            ${ChatColor.GREEN}CrafterLegends起動:
-              ${ChatColor.WHITE}現在のプラグインのバージョンは ${ChatColor.YELLOW}$version ${ChatColor.WHITE}です
-              ${ChatColor.WHITE}プラグインの最新バージョンは ${ChatColor.YELLOW}${getLatestVersion()} ${ChatColor.WHITE}です
+            ${ConsoleColor.GREEN}CrafterLegends起動:
+              ${ConsoleColor.YELLOW}現在のプラグインのバージョンは ${ConsoleColor.RESET}${ConsoleColor.GOLD}$version ${ConsoleColor.YELLOW}です
+              ${ConsoleColor.YELLOW}プラグインの最新バージョンは ${ConsoleColor.GOLD}${getLatestVersion()} ${ConsoleColor.YELLOW}です${ConsoleColor.RESET}
         """.trimIndent())
     }
 
     override fun onDisable() {
         logger.info("""
-            CrafterLegends停止:
+            ${ConsoleColor.RED}CrafterLegends停止:${ConsoleColor.RESET}
         """.trimIndent())
     }
 
