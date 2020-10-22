@@ -1,13 +1,17 @@
 package dev.siro256.spigotpl.crafterlegends
 
 import dev.siro256.spigotpl.crafterlegends.commands.TestCommand
+import dev.siro256.spigotpl.crafterlegends.util.ConsoleColor
 import org.bukkit.Bukkit
-import org.bukkit.ChatColor
 import org.bukkit.command.CommandExecutor
 import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
+import java.util.logging.Logger
 
 class CrafterLegends: JavaPlugin() {
+    init {
+        Companion.logger = logger
+    }
 
     private val version = "0.0.1-Alpha"
 
@@ -45,6 +49,6 @@ class CrafterLegends: JavaPlugin() {
     }
 
     companion object {
-        val logger = Bukkit.getLogger()
+        lateinit var logger: Logger
     }
 }
