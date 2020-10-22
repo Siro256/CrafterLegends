@@ -1,0 +1,18 @@
+### 書き換えないで! ###
+config-version: v0.0.1-Alpha
+
+# Databaseの設定
+# 本プロジェクトはMySQL $VERSION を使用して開発しています。 TODO: $VERSION
+# その他のバージョンや、他のDBを使用した場合の動作は保証しません。
+#
+# db-host: 接続先のホスト名 default: localhost
+# db-port: 接続先のポート default: 3306
+# db-user: 接続時に使用するユーザー名  default: なし
+# db-password: 使用するユーザーのパスワード default: なし
+# db-table: データベース名 default: なし
+db-host: localhost
+db-port: 3306
+db-user:
+db-password:
+db-table:
+
