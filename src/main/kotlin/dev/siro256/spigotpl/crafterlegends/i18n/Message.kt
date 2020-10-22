@@ -17,7 +17,11 @@ enum class Message {
     ITEM_GEAR_HELMET_LV1,
     ITEM_GEAR_HELMET_LV2,
     ITEM_GEAR_HELMET_LV3,
-    ITEM_GEAR_HELMET_LV4;
+    ITEM_GEAR_HELMET_LV4,
+    ITEM_GEAR_KNOCKDOWN_SHIELD_LV1,
+    ITEM_GEAR_KNOCKDOWN_SHIELD_LV2,
+    ITEM_GEAR_KNOCKDOWN_SHIELD_LV3,
+    ITEM_GEAR_KNOCKDOWN_SHIELD_LV4;
 
     companion object {
         val mapping = HashMap<Locale, HashMap<Message, String>>()
